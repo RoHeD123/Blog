@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+
+{% block title %}خانه{% endblock %}
+
+{% block content %}
+  <!-- محتوای صفحه -->
+{% endblock %}
+
+<h1>افزودن پست جدید</h1>
+    <form method="post">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="عنوان"><br>
+    <textarea name="content" placeholder="محتوا"></textarea><br>
+    <button type="submit">افزودن</button>
+    </form>
+    

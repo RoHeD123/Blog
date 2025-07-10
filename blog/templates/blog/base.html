@@ -1,0 +1,23 @@
+<!-- templates/blog/base.html -->
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}عنوان صفحه{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <!-- منو و دکمه خروج -->
+        <form method="post" action="{% url 'logout' %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit">خروج</button>
+        </form>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- محتوای هر صفحه اینجا می‌آید -->
+        {% endblock %}
+    </main>
+</body>
+</html>

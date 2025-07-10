@@ -6,7 +6,11 @@ import sys
 
 def main():
     """Run administrative tasks."""
+<<<<<<< HEAD
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fourdb.settings')
+=======
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')
+>>>>>>> 2f897bc (This is for devlopers)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -19,4 +23,8 @@ def main():
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     main()
+=======
+    main()
+>>>>>>> 2f897bc (This is for devlopers)

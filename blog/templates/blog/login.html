@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+
+{% block title %}خانه{% endblock %}
+
+{% block content %}
+  <!-- محتوای صفحه -->
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>ورود</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+
+</head>
+<body>
+    <h2>ورود به سایت</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ورود</button>
+    </form>
+    <p>کاربر جدید هستید؟ <a href="{% url 'signup' %}">ثبت نام کنید</a></p>
+</body>
+</html>
